@@ -1,0 +1,220 @@
+header {
+	background:#DF7401;
+	color:#FFFFFF;
+}
+
+.main {
+	background:#f2f2f2;
+}
+
+.color1 {
+	background: #34495e;
+	color:#fff;
+}
+
+aside {
+	background:#c0392b;
+	color:#fff;
+}
+
+footer {
+	background:#DF7401;
+	color:#fff;
+	
+}
+
+
+* {
+	margin:0;
+	padding:0;
+}
+ 
+/*EN EL VIDEO HAY UN ERROR POR EL CUAL NO SE VISUALIZA EN GOOGLE CHROME,
+EL CÓDIGO A CONTINUACIÓN YA ESTA CORREGIDO*/
+ 
+header {
+	margin-top:10px;
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+}
+ 
+nav {
+    top:-20px;
+    position: absolute;
+    left:0;
+    right:0;
+	margin:150px auto;
+	max-width:1000px;
+	width:90%;
+}
+ 
+nav ul {
+	list-style:none;
+}
+ 
+nav > ul {
+	display:table;
+	/*Quitamos el overflow hidden que estaba aqui*/
+	width:100%;
+	background:#000;
+	position:relative;
+
+}
+ 
+nav > ul li {
+	display:table-cell;
+	
+}
+ 
+/*Sub-menu*/
+nav > ul > li:hover > ul {
+	display:block;
+	height:100%;
+	
+}
+ 
+nav > ul > li > ul {
+	display:block;
+	position:absolute;
+	background:#000;
+	left:0;
+	right:0;
+	overflow:hidden;
+	height:0%;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav > ul > li > ul > li a:hover {
+	background:#5da5a2;
+	
+}
+ 
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:150px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+	
+}
+ 
+nav > ul > li > a span .icon {
+	display:block;
+	line-height:60px;
+}
+ 
+nav > ul > li > a:hover > span {
+	top:0;
+}
+ 
+/*Colores*/
+nav ul li a .primero {
+	background:#0e5061;
+}
+ 
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+ 
+nav ul li a .tercero {
+	background:#f25724;
+}
+ 
+nav ul li a .cuarto {
+	background:#174459;
+}
+ 
+nav ul li a .quinto {
+	background:#37a4d9;
+}
+
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+
+.item:nth-child(1) {
+    background: #74C390;
+}
+
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+
+.item:nth-child(3) {
+    background: #E46653;
+}
+
