@@ -8,7 +8,7 @@
 		$extencion  =  basename($_FILES['file']['type']);
 		$nombre_sys = $cad.".jpg";
 		$ruta = "img/{$nombre_sys}";
-		echo "kkkk".
+		echo "ruta creada".
 		$extencion;
         $sql = "UPDATE CAROUSEL SET path='{$ruta}' WHERE id_img = {$cad};";
    	
@@ -35,9 +35,13 @@
 			if($tipo == "jpeg" || $tipo == "jpg"){ // Si el tipo de imagen a subir es el mismo de los permitidos, segimos. Puedes agregar mas tipos de imagen 
 				//move_uploaded_file ( $_FILES [ 'file' ][ 'tmp_name' ], $destino . '/' .$cad.'.'.$tipo);  // Subimos el archivo 
 				move_uploaded_file ( $_FILES [ 'file' ][ 'tmp_name' ], $destino . '/' .$nombre_sys);
-				include('post.html'); // Incluimos la plantilla 
+                //header ("Location: ../admon_index.php");
+                //header("Refresh:0");
+				header("Refresh:0; url=../admon_index.php");
+							
 			}else 
-			echo "el tipo de archivo no es de los permitidos";// Si no es el tipo permitido lo desimos 
+			echo "el tipo de archivo no es de los permitidos";// Si no es el tipo permitido lo desimos
+			 
 		} 
 		else echo "El archivo supera el peso permitido.";// Si supera el tamaño de permitido lo desimos 
 	} 
